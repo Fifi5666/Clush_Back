@@ -37,6 +37,7 @@
     
     4. 서버를 실행합니다. 제가 사용한 vscode의 경우 스프링부트 대시보드에서 서버를 실행하거나 ./gradlew bootRun
     다른 IDE나 도구를 사용하는 경우, IDE의 실행 버튼을 클릭하거나 터미널에서 해당 명령어를 입력하여 서버를 실행할 수 있습니다.
+    Eclipse 또는 IntelliJ 등 : ./gradlew bootRun
 
     5. Swagger 로 Test
 
@@ -86,17 +87,25 @@
 
     3. POST
     URL : /todos
-    새로운 할 일을 생성합니다.
+    새로운 할 일을 생성합니다. status는 기본 0(하기 전)으로 생성됩니다.
+    Request body :
     {
         "name": "할 일 이름"
-        "status" : 할 일의 상태 0(하기 전) 또는, 1(완료) status를 쓰지 않아도 0으로 기본값이 설정되어 있습니다.
         "dueDate" : "할 일의 마감일 (날짜, YYYY-MM-DD 형식)"
         "priority" : "LOW, MEDIUM, HIGH 중 하나 작성"
+    }
+    예시 :
+    {
+        "name": "과제 제출",
+        "status": 0,
+        "dueDate": "2024-09-10",
+        "priority": "HIGH"
     }
 
     4. PUT
     URL : /todos
     특정 할 일을 수정. 모든 할 일을 완료로 설정할 수도 있습니다.
+    Request body :
     {
         "no" : 업데이트할 할 일의 no
         "name" : "수정할 할 일 이름"
