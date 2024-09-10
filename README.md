@@ -35,8 +35,8 @@
     spring.datasource.username=<사용자 계정>
     spring.datasource.password=<사용자 패스워드>
     
-    4. 서버를 실행합니다. 스프링부트 대시보드에서 서버를 실행하거나
-    ./gradlew bootRun
+    4. 서버를 실행합니다. 제가 사용한 vscode의 경우 스프링부트 대시보드에서 서버를 실행하거나 ./gradlew bootRun
+    다른 IDE나 도구를 사용하는 경우, IDE의 실행 버튼을 클릭하거나 터미널에서 해당 명령어를 입력하여 서버를 실행할 수 있습니다.
 
     5. Swagger 로 Test
 
