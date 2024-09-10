@@ -97,7 +97,6 @@
     예시 :
     {
         "name": "과제 제출",
-        "status": 0,
         "dueDate": "2024-09-10",
         "priority": "HIGH"
     }
